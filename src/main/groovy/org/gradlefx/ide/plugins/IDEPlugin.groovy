@@ -16,9 +16,8 @@
 
 package org.gradlefx.ide.plugins
 
-import org.gradle.api.Plugin;
-import org.gradle.api.Project;
-
+import org.gradle.api.Plugin
+import org.gradle.api.Project
 
 class IDEPlugin implements Plugin<Project> {
     

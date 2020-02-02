@@ -1,11 +1,11 @@
 package org.gradlefx.cli.common.optioninjectors
 
 import groovy.io.FileType
-import org.gradlefx.cli.compiler.CompilerOption
 import org.gradlefx.cli.common.requirements.CompilerOptionsRequirement
 import org.gradlefx.cli.common.requirements.GradleFxConventionRequirement
 import org.gradlefx.cli.common.requirements.ProjectRequirement
 import org.gradlefx.cli.common.tools.SourceFileFilter
+import org.gradlefx.cli.compiler.CompilerOption
 
 /**
  * Trait providing various methods to inject sources related options into the compiler options.

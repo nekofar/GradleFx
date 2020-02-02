@@ -17,8 +17,8 @@
 package org.gradlefx.configuration
 
 import org.gradle.api.Project
-import org.gradlefx.validators.runner.FailOnErrorValidatorRunner
 import org.gradlefx.validators.FlexSDKSpecifiedValidator
+import org.gradlefx.validators.runner.FailOnErrorValidatorRunner
 
 class FlexAntTasksConfigurator {
 

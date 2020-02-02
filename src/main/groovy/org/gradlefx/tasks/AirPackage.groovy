@@ -21,11 +21,11 @@ import org.gradle.api.DefaultTask
 import org.gradle.api.file.ConfigurableFileTree
 import org.gradle.api.file.FileTreeElement
 import org.gradle.api.tasks.TaskAction
+import org.gradlefx.cli.compiler.CompilerOption
+import org.gradlefx.conventions.FlexType
+import org.gradlefx.conventions.GradleFxConvention
 import org.gradlefx.util.TemplateUtil
 import org.gradlefx.validators.actions.ValidateAirPackageTaskPropertiesAction
-import org.gradlefx.cli.compiler.CompilerOption;
-import org.gradlefx.conventions.FlexType;
-import org.gradlefx.conventions.GradleFxConvention
 
 class AirPackage extends DefaultTask implements TemplateUtil {
 

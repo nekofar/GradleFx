@@ -16,8 +16,8 @@
 
 package org.gradlefx.configuration.sdk.states.unpacking
 
-import org.gradlefx.configuration.sdk.SdkInstallLocation
 import org.gradle.api.Project
+import org.gradlefx.configuration.sdk.SdkInstallLocation
 
 class SdkZipUnpacker extends AbstractSdkUnpacker {
 

@@ -28,14 +28,7 @@ import org.gradlefx.configuration.sdk.states.flex.DetermineFlexSdkDeclarationTyp
 import org.gradlefx.tasks.*
 import org.gradlefx.tasks.adl.AdlTask
 import org.gradlefx.tasks.compile.Compile
-import org.gradlefx.tasks.mobile.InstallApp
-import org.gradlefx.tasks.mobile.InstallSimulatorApp
-import org.gradlefx.tasks.mobile.LaunchApp
-import org.gradlefx.tasks.mobile.LaunchSimulatorApp
-import org.gradlefx.tasks.mobile.ReleaseAirMobilePackage
-import org.gradlefx.tasks.mobile.SimulatorAirMobilePackage
-import org.gradlefx.tasks.mobile.UninstallApp
-import org.gradlefx.tasks.mobile.UninstallSimulatorApp
+import org.gradlefx.tasks.mobile.*
 
 class GradleFxPlugin extends AbstractGradleFxPlugin {
 

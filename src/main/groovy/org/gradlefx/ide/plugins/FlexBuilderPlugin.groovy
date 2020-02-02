@@ -16,9 +16,8 @@
 
 package org.gradlefx.ide.plugins
 
-import org.gradlefx.ide.tasks.FlexBuilderProject;
-import org.gradlefx.plugins.AbstractGradleFxPlugin;
-
+import org.gradlefx.ide.tasks.FlexBuilderProject
+import org.gradlefx.plugins.AbstractGradleFxPlugin
 
 class FlexBuilderPlugin extends AbstractGradleFxPlugin {
     

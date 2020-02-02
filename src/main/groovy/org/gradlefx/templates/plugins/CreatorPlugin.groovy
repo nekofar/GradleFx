@@ -16,9 +16,8 @@
 
 package org.gradlefx.templates.plugins
 
-import org.gradle.api.Plugin;
-import org.gradlefx.plugins.AbstractGradleFxPlugin;
 
+import org.gradlefx.plugins.AbstractGradleFxPlugin
 
 class CreatorPlugin extends AbstractGradleFxPlugin {
     

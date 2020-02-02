@@ -22,7 +22,6 @@ import org.gradle.api.artifacts.FileCollectionDependency
 import org.gradle.api.artifacts.ProjectDependency
 import org.gradle.api.logging.LogLevel
 import org.gradle.api.tasks.TaskAction
-import org.gradlefx.cli.instructions.CompilerInstructionsBuilder
 import org.gradlefx.configuration.Configurations
 import org.gradlefx.conventions.FlexType
 import org.gradlefx.conventions.GradleFxConvention

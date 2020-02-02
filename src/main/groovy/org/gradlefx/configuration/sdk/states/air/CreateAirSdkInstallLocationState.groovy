@@ -17,11 +17,11 @@
 package org.gradlefx.configuration.sdk.states.air
 
 import org.gradle.api.artifacts.Configuration
+import org.gradlefx.configuration.Configurations
 import org.gradlefx.configuration.sdk.SdkInitState
 import org.gradlefx.configuration.sdk.SdkInstallLocation
 import org.gradlefx.configuration.sdk.SdkType
 import org.gradlefx.configuration.sdk.states.AbstractCreateSdkInstallLocationState
-import org.gradlefx.configuration.Configurations
 
 class CreateAirSdkInstallLocationState extends AbstractCreateSdkInstallLocationState {
     CreateAirSdkInstallLocationState(Boolean isInstallationRequired) {

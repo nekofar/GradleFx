@@ -17,9 +17,9 @@
 package org.gradlefx.cli.instructions
 
 import org.gradle.api.Project
-import org.gradlefx.cli.compiler.CompilerOption
 import org.gradlefx.cli.common.optioninjectors.LibraryOptionsInjector
 import org.gradlefx.cli.common.optioninjectors.SourcesOptionsInjector
+import org.gradlefx.cli.compiler.CompilerOption
 
 /**
  * Compiler instructions for generating ASDoc.

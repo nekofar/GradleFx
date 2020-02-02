@@ -16,14 +16,12 @@
 
 package org.gradlefx.plugins
 
-import org.gradle.api.Plugin;
-import org.gradle.api.Project;
-import org.gradle.api.Task;
-import org.gradle.api.artifacts.Configuration;
+import org.gradle.api.Plugin
+import org.gradle.api.Project
+import org.gradle.api.Task
+import org.gradle.api.artifacts.Configuration
 import org.gradlefx.configuration.Configurations
-import org.gradlefx.configuration.sdk.SdkType;
-import org.gradlefx.conventions.GradleFxConvention;
-
+import org.gradlefx.conventions.GradleFxConvention
 
 abstract class AbstractGradleFxPlugin implements Plugin<Project> {
     

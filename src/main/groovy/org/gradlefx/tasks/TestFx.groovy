@@ -29,14 +29,15 @@ import org.gradlefx.cli.compiler.CompilerJar
 import org.gradlefx.cli.compiler.CompilerProcess
 import org.gradlefx.cli.compiler.DefaultCompilerResultHandler
 import org.gradlefx.cli.instructions.CompilerInstructionsBuilder
-import org.gradlefx.cli.instructions.flexsdk.FlexUnitAppInstructions as FlexSDKFlexUnitAppInstructions
 import org.gradlefx.cli.instructions.airsdk.standalone.actionscriptonly.FlexUnitAppInstructions as NoFlexSDKFlexUnitAppInstructions
+import org.gradlefx.cli.instructions.flexsdk.FlexUnitAppInstructions as FlexSDKFlexUnitAppInstructions
 import org.gradlefx.configuration.FlexUnitAntTasksConfigurator
 import org.gradlefx.conventions.FlexUnitConvention
 import org.gradlefx.conventions.GradleFxConvention
 import org.gradlefx.util.PathToClassNameExtractor
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
+
 /*
  * A Gradle task to execute FlexUnit tests.
  */
