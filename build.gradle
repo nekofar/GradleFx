@@ -23,7 +23,7 @@ apply plugin: 'signing'
 apply plugin: 'idea'
 
 group = 'org.gradlefx'
-version = '4.0.0'
+version = '4.1.0'
 ext.packaging = 'jar'
 
 def isDevBuild
@@ -49,11 +49,11 @@ repositories {
 }
 
 dependencies {
-    compile gradleApi()
-    compile group: 'commons-lang', name: 'commons-lang', version: '2.6'
-    compile group: 'commons-io', name: 'commons-io', version: '2.4'
-    compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.5.4'
-    testCompile group: 'org.spockframework', name: 'spock-core', version: '0.7-groovy-2.0'
+    implementation gradleApi()
+    implementation group: 'commons-lang', name: 'commons-lang', version: '2.6'
+    implementation group: 'commons-io', name: 'commons-io', version: '2.4'
+    implementation group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.5.4'
+    testImplementation group: 'org.spockframework', name: 'spock-core', version: '0.7-groovy-2.0'
 }
 
 task groovydocJar(type: Jar, dependsOn: groovydoc) {
