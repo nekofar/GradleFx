@@ -50,7 +50,7 @@ trait FlexFrameworkRslOptionsInjector implements ProjectRequirement, GradleFxCon
         }
     }
 
-    private static String findRslLibNameInRuntimeSharedLibraryPath(NodeChild runtimeSharedLibraryPathElement) {
+    private String findRslLibNameInRuntimeSharedLibraryPath(NodeChild runtimeSharedLibraryPathElement) {
         String primaryRslUrl = runtimeSharedLibraryPathElement['rsl-url'][0].text()
         if(primaryRslUrl.endsWith(".swf")) {
             //Apache version of the sdk detected which has no swz rsls anymore

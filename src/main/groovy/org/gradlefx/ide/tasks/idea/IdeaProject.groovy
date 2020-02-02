@@ -136,7 +136,7 @@ class IdeaProject extends AbstractIDEProject {
                         new Node(rootMgr, 'orderEntry', [type:"module", 'module-name':projectDependency.dependencyProject.name]);
                     } else if (dependency instanceof DefaultSelfResolvingDependency) {
                         def selfDependency = dependency as DefaultSelfResolvingDependency;
-                        selfDependency.source.files.each { file ->
+                        selfDependency.files.files.each { file ->
                             generateDependencyNode(file, entries, rootMgr, configType);
                         }
                     } else if (dependency instanceof DefaultExternalModuleDependency) {
@@ -190,6 +190,7 @@ class IdeaProject extends AbstractIDEProject {
     }
 
     private void updateConfiguration() {
+        final self = this
         editXmlFile imlFilename, { xml ->
             def configuration = xml.component.find { it.'@name' == 'FlexBuildConfigurationManager' }.configurations.configuration.first()
             //configuration.@'pure-as' = flexConvention.frameworkLinkage == FrameworkLinkage.none;
@@ -236,7 +237,7 @@ class IdeaProject extends AbstractIDEProject {
                     packaging.@'custom-descriptor-path' = "\$MODULE_DIR\$/${flexConvention.air.applicationDescriptor}"
                     new Node(packaging, 'AirSigningOptions',
                             ['keystore-path':"\$MODULE_DIR\$/${FilenameUtils.separatorsToUnix(project.relativePath(flexConvention.air.keystore))}", 'use-temp-certificate':false])
-                    addFilesInPackage(packaging)
+                    self.addFilesInPackage(packaging)
                     break;
                 case FlexType.mobile:
                     configuration.attributes().remove('output-type')
@@ -274,7 +275,7 @@ class IdeaProject extends AbstractIDEProject {
 
                     }
 
-                    addFilesInPackage(packaging)
+                    self.addFilesInPackage(packaging)
                     break;
             }
 
