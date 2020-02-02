@@ -77,10 +77,11 @@ abstract class AbstractGradleFxPlugin implements Plugin<Project> {
         //always add tasks to make sure they are immediately on the task graph,
         //but remove them after evaluation if it turns out we don't need them
         Task task = project.tasks.create name, taskClass
-        
-        project.afterEvaluate {
-            if (!condition()) project.tasks.remove task
-        }
+
+        //TODO: Make sure not cause any problem
+//        project.afterEvaluate {
+//            if (!condition()) project.tasks.remove task
+//        }
         
         return task
     }
