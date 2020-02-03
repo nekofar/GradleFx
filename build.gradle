@@ -13,17 +13,14 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
-
-import org.gradle.api.XmlProvider
-import org.gradle.api.artifacts.maven.MavenDeployment
-
 apply plugin: 'groovy'
 apply plugin: 'maven'
+apply plugin: 'maven-publish'
 apply plugin: 'signing'
 apply plugin: 'idea'
 
 group = 'org.gradlefx'
-version = '1.5.0'
+version = '5.1.1'
 ext.packaging = 'jar'
 
 def isDevBuild
@@ -49,33 +46,27 @@ repositories {
 }
 
 dependencies {
-    compile gradleApi()
-    compile group: 'commons-lang', name: 'commons-lang', version: '2.6'
-    compile group: 'commons-io', name: 'commons-io', version: '2.6'
-    compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.3.10'
-    testCompile group: 'org.spockframework', name: 'spock-core', version: '0.7-groovy-2.0'
+    implementation gradleApi()
+    implementation group: 'commons-lang', name: 'commons-lang', version: '2.6'
+    implementation group: 'commons-io', name: 'commons-io', version: '2.6'
+    implementation group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.5.4'
+    testImplementation group: 'org.spockframework', name: 'spock-core', version: '0.7-groovy-2.0'
 }
 
 task groovydocJar(type: Jar, dependsOn: groovydoc) {
-    classifier = 'javadoc'
+    getArchiveClassifier().set('javadoc')
     from 'build/docs/groovydoc'
 }
 
 task sourcesJar(type: Jar) {
     from sourceSets.main.allSource
-    classifier = 'sources'
+    getArchiveClassifier().set('sources')
 }
 
 artifacts {
     archives jar
     archives groovydocJar
     archives sourcesJar
-}
-
-task wrapper(type: Wrapper) {
-    group = 'Buildmaster'
-    description = 'Generates gradlew and gradlew.bat bootstrap scripts'
-    gradleVersion = '2.5'
 }
 
 //********* artifact signing *********

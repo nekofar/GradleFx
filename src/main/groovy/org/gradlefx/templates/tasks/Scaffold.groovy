@@ -16,21 +16,17 @@
 
 package org.gradlefx.templates.tasks
 
+import org.gradle.api.DefaultTask
+import org.gradle.api.logging.LogLevel
+import org.gradle.api.tasks.TaskAction
+import org.gradlefx.conventions.GradleFxConvention
 import org.gradlefx.tasks.TaskGroups
 import org.gradlefx.templates.validators.actions.ValidateScaffoldTaskPropertiesAction
+import org.gradlefx.util.TemplateUtil
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
 
-import java.io.InputStream;
-import org.gradle.api.DefaultTask;
-import org.gradle.api.logging.LogLevel;
-import org.gradle.api.tasks.TaskAction;
-import org.gradlefx.conventions.GradleFxConvention;
-import org.gradlefx.util.TemplateUtil;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-
-@Mixin(TemplateUtil)
-class Scaffold extends DefaultTask {
+class Scaffold extends DefaultTask implements TemplateUtil {
     public static final String NAME = 'scaffold'
 
     protected static final Logger LOG = LoggerFactory.getLogger 'gradlefx'

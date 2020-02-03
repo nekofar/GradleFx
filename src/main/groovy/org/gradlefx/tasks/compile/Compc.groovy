@@ -21,8 +21,8 @@ import org.gradle.api.tasks.TaskAction
 import org.gradlefx.cli.compiler.*
 import org.gradlefx.cli.instructions.CompilerInstructionsBuilder
 import org.gradlefx.cli.instructions.airsdk.standalone.actionscriptonly.LibraryInstructions as NoFlexSDKLibraryInstructions
-import org.gradlefx.cli.instructions.flexsdk.LibraryInstructions as FlexSDKLibraryInstructions
 import org.gradlefx.cli.instructions.flexsdk.AirLibraryInstructions as FlexSDKAirLibraryInstructions
+import org.gradlefx.cli.instructions.flexsdk.LibraryInstructions as FlexSDKLibraryInstructions
 import org.gradlefx.cli.instructions.flexsdk.actionscriptonly.LibraryInstructions as FlexSDKPureASLibraryInstructions
 import org.gradlefx.tasks.Tasks
 import org.gradlefx.validators.actions.ValidateCompcTaskPropertiesAction

@@ -1,10 +1,9 @@
 package org.gradlefx.cli.common.optioninjectors
 
-import org.gradlefx.cli.compiler.CompilerOption
 import org.gradlefx.cli.common.requirements.CompilerOptionsRequirement
 import org.gradlefx.cli.common.requirements.GradleFxConventionRequirement
 import org.gradlefx.cli.common.requirements.ProjectRequirement
-import org.gradlefx.util.ProjectFileSearcher
+import org.gradlefx.cli.compiler.CompilerOption
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 
@@ -13,7 +12,7 @@ import org.slf4j.LoggerFactory
  */
 trait SimpleConventionOptionsInjector implements CompilerOptionsRequirement, ProjectRequirement, GradleFxConventionRequirement {
 
-    protected static final Logger LOG = LoggerFactory.getLogger 'gradlefx'
+    private static final Logger LOG = LoggerFactory.getLogger 'gradlefx'
 
     void loadDefaultConfig() {
         compilerOptions.add CompilerOption.LOAD_CONFIG, flexConvention.configPath

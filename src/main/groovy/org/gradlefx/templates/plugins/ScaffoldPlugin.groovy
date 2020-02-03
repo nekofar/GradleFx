@@ -16,9 +16,8 @@
 
 package org.gradlefx.templates.plugins
 
-import org.gradlefx.plugins.AbstractGradleFxPlugin;
-import org.gradlefx.templates.tasks.Scaffold;
-
+import org.gradlefx.plugins.AbstractGradleFxPlugin
+import org.gradlefx.templates.tasks.Scaffold
 
 class ScaffoldPlugin extends AbstractGradleFxPlugin {
     

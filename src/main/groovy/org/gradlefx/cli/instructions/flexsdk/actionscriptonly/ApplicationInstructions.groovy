@@ -17,15 +17,8 @@
 package org.gradlefx.cli.instructions.flexsdk.actionscriptonly
 
 import org.gradle.api.Project
-import org.gradlefx.cli.common.optioninjectors.ApplicationOptionsInjector
-import org.gradlefx.cli.common.optioninjectors.FlexFrameworkRslOptionsInjector
-import org.gradlefx.cli.common.optioninjectors.FlexSDKResourcesOptionsInjector
-import org.gradlefx.cli.common.optioninjectors.LibraryOptionsInjector
-import org.gradlefx.cli.common.optioninjectors.SimpleConventionOptionsInjector
-import org.gradlefx.cli.common.optioninjectors.SourcesOptionsInjector
-import org.gradlefx.cli.compiler.CompilerOption
+import org.gradlefx.cli.common.optioninjectors.*
 import org.gradlefx.cli.instructions.CompilerInstructionsBuilder
-import org.gradlefx.conventions.FrameworkLinkage
 
 /**
  * Compiler instructions for an application that makes use of the Flex SDK for compilation, but is a pure actionscript project.

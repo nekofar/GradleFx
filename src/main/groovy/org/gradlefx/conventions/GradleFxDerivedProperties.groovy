@@ -16,12 +16,11 @@
 
 package org.gradlefx.conventions
 
+import org.gradle.api.artifacts.ProjectDependency
+import org.gradlefx.cli.compiler.CompilerOption
 import org.gradlefx.configuration.sdk.SdkType
 
 import static java.util.UUID.randomUUID
-import org.gradle.api.artifacts.ProjectDependency;
-import org.gradlefx.cli.compiler.CompilerOption;
-
 
 class GradleFxDerivedProperties {
 

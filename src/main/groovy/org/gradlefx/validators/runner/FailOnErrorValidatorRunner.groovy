@@ -16,11 +16,10 @@
 
 package org.gradlefx.validators.runner
 
-import org.slf4j.Logger
-import org.slf4j.LoggerFactory
-
 import org.gradle.api.Project
 import org.gradlefx.validators.ProjectPropertyValidator
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
 
 class FailOnErrorValidatorRunner implements ValidatorRunner {
 

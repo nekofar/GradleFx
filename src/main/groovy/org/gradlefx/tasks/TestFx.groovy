@@ -29,14 +29,15 @@ import org.gradlefx.cli.compiler.CompilerJar
 import org.gradlefx.cli.compiler.CompilerProcess
 import org.gradlefx.cli.compiler.DefaultCompilerResultHandler
 import org.gradlefx.cli.instructions.CompilerInstructionsBuilder
-import org.gradlefx.cli.instructions.flexsdk.FlexUnitAppInstructions as FlexSDKFlexUnitAppInstructions
 import org.gradlefx.cli.instructions.airsdk.standalone.actionscriptonly.FlexUnitAppInstructions as NoFlexSDKFlexUnitAppInstructions
+import org.gradlefx.cli.instructions.flexsdk.FlexUnitAppInstructions as FlexSDKFlexUnitAppInstructions
 import org.gradlefx.configuration.FlexUnitAntTasksConfigurator
 import org.gradlefx.conventions.FlexUnitConvention
 import org.gradlefx.conventions.GradleFxConvention
 import org.gradlefx.util.PathToClassNameExtractor
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
+
 /*
  * A Gradle task to execute FlexUnit tests.
  */
@@ -223,10 +224,18 @@ class TestFx extends DefaultTask {
         return flexUnit.command
     }
 
+    /**
+     * Returns default value for FlexUnit's command field
+     *
+     * @return path to adl for 'air' player, path to flash player executable for 'flash' player
+     */
     private String findFlexUnitCommand() {
         if (flexUnit.player == 'air')
             return getAdlPath()
-        throwMissingCommandException("The Flash player executable is not found")
+        else if (flexUnit.player == 'flash') {
+            return getFlashPlayerPath()
+        }
+        throwMissingCommandException("Incorrect player type")
     }
 
     private String getAdlPath() {
@@ -237,6 +246,15 @@ class TestFx extends DefaultTask {
         if (!adlPath.canExecute())
             throwMissingCommandException("Unable to locate the ADL executable at $adlPath.absolutePath")
         return adlPath
+    }
+
+
+    private String getFlashPlayerPath() {
+        def flashPath = new File(System.getenv()['FLASH_PLAYER_EXE']);
+        if (!flashPath.canExecute())
+            throwMissingCommandException("The Flash player executable is not found")
+
+        return flashPath
     }
 
     private static void throwMissingCommandException(String message) {

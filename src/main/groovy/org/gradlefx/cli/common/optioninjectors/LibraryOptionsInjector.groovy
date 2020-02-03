@@ -2,9 +2,9 @@ package org.gradlefx.cli.common.optioninjectors
 
 import org.gradle.api.artifacts.Configuration
 import org.gradle.api.artifacts.ResolveException
-import org.gradlefx.cli.compiler.CompilerOption
 import org.gradlefx.cli.common.requirements.CompilerOptionsRequirement
 import org.gradlefx.cli.common.requirements.ProjectRequirement
+import org.gradlefx.cli.compiler.CompilerOption
 import org.gradlefx.conventions.FlexType
 
 /**

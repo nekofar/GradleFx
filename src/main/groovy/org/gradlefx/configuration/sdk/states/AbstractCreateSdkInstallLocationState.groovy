@@ -17,10 +17,10 @@
 package org.gradlefx.configuration.sdk.states
 
 import org.gradle.api.Project
+import org.gradlefx.configuration.sdk.*
 import org.gradlefx.conventions.GradleFxConvention
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
-import org.gradlefx.configuration.sdk.*
 
 abstract class AbstractCreateSdkInstallLocationState implements SdkInitState {
 

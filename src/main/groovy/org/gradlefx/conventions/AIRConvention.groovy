@@ -17,9 +17,8 @@
 package org.gradlefx.conventions
 
 import org.gradle.api.Project
-import org.gradle.util.ConfigureUtil
 import org.gradle.api.file.ConfigurableFileTree
-
+import org.gradle.util.ConfigureUtil
 
 /**
  * All the convention properties related the AIR.
@@ -40,6 +39,7 @@ class AIRConvention {
     private String tsa
     /**
      * The location of the air descriptor file. Uses the project name by convention for this file.
+     * Supports @{version}, @{content} tokens
      */
     private String applicationDescriptor
     /**

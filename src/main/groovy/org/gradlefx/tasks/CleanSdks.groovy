@@ -18,8 +18,8 @@ package org.gradlefx.tasks
 
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.TaskAction
-import org.gradlefx.configuration.sdk.SdkInstallLocationFactory
 import org.gradlefx.configuration.sdk.SdkInstallLocation
+import org.gradlefx.configuration.sdk.SdkInstallLocationFactory
 import org.gradlefx.configuration.sdk.SdkType
 
 class CleanSdks extends DefaultTask {

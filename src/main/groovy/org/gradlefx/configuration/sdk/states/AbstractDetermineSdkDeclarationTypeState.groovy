@@ -16,13 +16,12 @@
 
 package org.gradlefx.configuration.sdk.states
 
-import org.gradlefx.configuration.sdk.SdkInitState
-import org.slf4j.Logger
-import org.slf4j.LoggerFactory
-import org.gradlefx.configuration.sdk.SdkInitialisationContext
 import org.gradle.api.artifacts.Configuration
 import org.gradlefx.configuration.Configurations
-import org.gradle.api.Project
+import org.gradlefx.configuration.sdk.SdkInitState
+import org.gradlefx.configuration.sdk.SdkInitialisationContext
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
 
 abstract class AbstractDetermineSdkDeclarationTypeState implements SdkInitState {
     protected static final Logger LOG = LoggerFactory.getLogger 'gradlefx'

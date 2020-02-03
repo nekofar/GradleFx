@@ -16,10 +16,10 @@
 
 package org.gradlefx.configuration.sdk.states.unpacking
 
+import org.gradle.api.Project
 import org.gradle.api.file.FileTree
 import org.gradle.api.file.FileVisitDetails
 import org.gradlefx.configuration.sdk.SdkInstallLocation
-import org.gradle.api.Project
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 

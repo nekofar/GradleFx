@@ -24,7 +24,6 @@ import org.gradlefx.cli.compiler.CompilerJar
 import org.gradlefx.cli.compiler.CompilerProcess
 import org.gradlefx.cli.compiler.DefaultCompilerResultHandler
 import org.gradlefx.cli.instructions.ASDocInstructions
-import org.gradlefx.cli.instructions.CompilerInstructionsBuilder
 import org.gradlefx.configuration.Configurations
 import org.gradlefx.conventions.GradleFxConvention
 

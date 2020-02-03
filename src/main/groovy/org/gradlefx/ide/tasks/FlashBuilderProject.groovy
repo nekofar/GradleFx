@@ -16,12 +16,11 @@
 
 package org.gradlefx.ide.tasks
 
-import org.gradle.api.Project;
-import org.gradlefx.configuration.Configurations;
-import org.gradlefx.conventions.FlexType;
-import org.gradlefx.conventions.FrameworkLinkage;
-import org.gradlefx.templates.tasks.Scaffold;
-
+import org.gradle.api.Project
+import org.gradlefx.configuration.Configurations
+import org.gradlefx.conventions.FlexType
+import org.gradlefx.conventions.FrameworkLinkage
+import org.gradlefx.templates.tasks.Scaffold
 
 @Mixin(FlashBuilderUtil)
 class FlashBuilderProject extends AbstractIDEProject {
