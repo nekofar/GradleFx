@@ -31,7 +31,7 @@ import org.gradlefx.ide.tasks.AbstractIDEProject
 
 class IdeaProject extends AbstractIDEProject {
 
-    public static final String NAME = 'idea'
+    public static final String NAME = 'ideaFx'
 
     private String imlFilename
 
